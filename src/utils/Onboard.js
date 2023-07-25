@@ -73,7 +73,7 @@ export const GetParams = async () => {
 
   response.account = currentAccount;
 
-  if (getChainID() !== 80001) {
+  if (getChainID() !== 11155111) {
     response.step = 2;
     return response;
   }
@@ -116,19 +116,40 @@ export const GetParams = async () => {
 
 
 
+// export async function SwitchNetwork() {
+//   await window?.ethereum?.request({
+//     method: 'wallet_addEthereumChain',
+//     params: [{
+//       chainId: '0x13881',
+//       chainName: 'Mumbai Testnet',
+//       nativeCurrency: {
+//         name: 'MATIC',
+//         symbol: 'MATIC',
+//         decimals: 18,
+//       },
+//       rpcUrls: ['https://rpc.ankr.com/polygon_mumbai'],
+//       blockExplorerUrls: ['https://mumbai.polygonscan.com/'],
+//     }],
+//   }).catch((error) => {
+//     console.log(error);v
+//   });
+// }
+
+
+
 export async function SwitchNetwork() {
   await window?.ethereum?.request({
     method: 'wallet_addEthereumChain',
     params: [{
-      chainId: '0x13881',
-      chainName: 'Mumbai Testnet',
+      chainId: '0xaa36a7',
+      chainName: 'Sepolia',
       nativeCurrency: {
-        name: 'MATIC',
-        symbol: 'MATIC',
+        name: 'sepolia',
+        symbol: 'sepolia',
         decimals: 18,
       },
-      rpcUrls: ['https://rpc.ankr.com/polygon_mumbai'],
-      blockExplorerUrls: ['https://mumbai.polygonscan.com/'],
+      rpcUrls: ['https://rpc.ankr.com/eth_sepolia'],
+      blockExplorerUrls: ['https://sepolia.etherscan.io/'],
     }],
   }).catch((error) => {
     console.log(error);v

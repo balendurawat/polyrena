@@ -62,7 +62,7 @@ const OnboardModal = () => {
         return (
           <>
             <p className={styles.modalText}>
-              You're on a different network. Switch to Polygon_Mumbai.
+              You're on a different network. Switch to Sepolia.
             </p>
             <CustomButton title="Switch" handleClick={SwitchNetwork} />
           </>
@@ -72,11 +72,11 @@ const OnboardModal = () => {
         return (
           <>
             <p className={styles.modalText}>
-              Oops, you don't have Matic tokens in your account
+              Oops, you don't have sepolia tokens in your account
             </p>
             <CustomButton
               title="Grab some test tokens"
-              handleClick={() => window.open('https://faucet.polygon.technology/', '_blank')}
+              handleClick={() => window.open('https://sepolia-faucet.pk910.de/', '_blank')}
             />
           </>
         );
